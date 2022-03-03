@@ -20,11 +20,48 @@ public class Task_3 {
 
         int number1 = 5;
         int number2 = 1;
+        int number3 = 4;
+        int number4 = 2;
 
+        System.out.println(min(number1, number2));
+        System.out.println(min3(number1, number2, number3));
+        System.out.println(min4(number1, number2, number3, number4));
+
+        String s = "Test";
+        printString3(s);
+        printStringFull(s);
 
     }
-    public static int min(int a, int b){
-        if
 
+        // 1
+    public static int min(int a, int b){
+        int minNumber = 0;
+        return a < b ? a : b;
+    }
+
+        // 2
+    public static int max(int a, int b) {
+        return a > b ? a : b;
+    }
+
+        // 3
+    public static int min3(int a, int b, int c) {
+        return min((min(a, b)), c);
+    }
+
+        // 4
+    public static int min4(int a, int b, int c, int d) {
+        int minimumTemp = min((min(a, b)), c);
+        return min(minimumTemp, d);
+    }
+
+        // 5
+    public static void printString3(String string) {
+        System.out.println(string + "\n" + string + "\n" + string);
+    }
+
+        // 6
+    public static void printStringFull(String string) {
+        System.out.println(string + " " + string + " " + string);
     }
 }
